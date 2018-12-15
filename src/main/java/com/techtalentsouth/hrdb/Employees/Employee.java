@@ -11,11 +11,12 @@ public class Employee {
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
+	
 	private String firstName;
 	private String lastName;
 	private Boolean isAdmin;
 	private Integer hrsWorked;
-	private Long passWord;
+	private String passWord;
 	
 	
 	public Employee() {
@@ -23,10 +24,12 @@ public class Employee {
 		
 	}
 	
-	public Employee(String firstName, String lastName, Boolean isAdmin, Integer hrsWorked) {
+	public Employee(String firstName, String lastName, Boolean isAdmin, Integer hrsWorked, String passWord) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.isAdmin = isAdmin;
+		this.hrsWorked = hrsWorked;
+		this.passWord = passWord;
 		
 	}
 	
@@ -43,10 +46,6 @@ public class Employee {
 
 	public Long getId() {
 		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
 	}
 
 	public String getFirstName() {
@@ -81,12 +80,18 @@ public class Employee {
 		this.hrsWorked = hrsWorked;
 	}
 
-	public Long getPassWord() {
+	public String getPassWord() {
 		return passWord;
 	}
 
-	public void setPassWord(Long passWord) {
+	public void setPassWord(String passWord) {
 		this.passWord = passWord;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", isAdmin=" + isAdmin
+				+ ", hrsWorked=" + hrsWorked + ", passWord=" + passWord + "]";
 	}
 	
 	
