@@ -12,9 +12,16 @@ public class EmployeeController {
 	
 	@GetMapping("/")
 	public String index() {
-		return "index.html";
+		return "employee/index.html";
 	}
 	
+	@GetMapping	
+//	suggestion for  checking admin  I think this should be done in the employeeController
+	public String checkAdmin(Employee employee) {
+		if(employee.getIsAdmin() == true) {
+			return "admin/index.html";
+		}else {return "employee/index.html";}
+	}
 	
 	
 

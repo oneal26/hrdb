@@ -5,6 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.springframework.web.bind.annotation.GetMapping;
+
 @Entity
 public class Employee {
 	
@@ -35,6 +37,7 @@ public class Employee {
 	
 	//This method is for checking whether the person loggin as admin is admin 
 	//incase we need this for loggin security
+//	Look in the EmployeeController.java for Latori's suggestion
 	public Boolean admin() {
 		  if(firstName =="Mike" && lastName =="Smith" && passWord == passWord) {
 			  return true;
@@ -43,7 +46,7 @@ public class Employee {
 			  
 			  return false;
 	}
-
+	
 	public Long getId() {
 		return id;
 	}
