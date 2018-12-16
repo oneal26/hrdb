@@ -1,0 +1,22 @@
+body{
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  line-height: 1.5em;
+}
+
+#container{
+  width: 40%;
+  margin:10px auto;
+  overflow: auto;
+}
+
+#logo{
+  margin: auto;
+  display: block;
+}
+#main-text{
+  text-align: center;
+  color: #333;
+  padding: 10px;
+  margin-bottom: 20px;
+}
