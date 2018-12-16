@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html
-	xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="UTF-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +8,9 @@
 					<title>edit employee</title>
 				</head>
 				<body>
+					<div th:replace="fragments/navbar :: navbar"></div>
 					<div class="container">
-						<navbar th:replace="fragments/navbar :: navbar"></navbar>
+						
 						<div id="logo">
 							<h1>HRDB</h1>
 						</div>

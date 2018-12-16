@@ -31,7 +31,7 @@ public class EmployeeController {
 	@GetMapping("index")
 	public ModelAndView index(Employee employee) {
 		ModelAndView mv = new ModelAndView("employee/index");
-		mv.addObject("employees", employeeRepository.findAll());
+//		mv.addObject("employees", employeeRepository.findAll());
 		return mv;
 	}
 	
@@ -70,7 +70,7 @@ public class EmployeeController {
 	public ModelAndView createEmployee(Employee employee) {
 		ModelAndView mv = new ModelAndView("employee/results");
 		Employee newEmployee = employeeRepository.save(employee);
-		mv.addObject("newEmployee", newEmployee);
+		mv.addObject("newEmployee", employee);
 		return mv;
 	}
 	
