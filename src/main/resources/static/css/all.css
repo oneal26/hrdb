@@ -1,26 +1,19 @@
+
+
+.header{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
 body{
-	background-color: #c4c4c4;
+	background-color:#e0e0e0
 }
 
 
-h1{
-	color: #878787;
-}
-
-.navbar, ul, li, a{
-	background-color: #878787;
-	display:inline;
-	list-style-type:none;
-	text-decoration:none;
-	color:#878787;
-}
-
-ul{
-	width:100%;
-}
-
-
-#spanIt{
-	height:5em;
-	width:100%;
+.result{
+	text-align: center;
+	align-content: center;
+	margin-right:auto;
+	margin-left:auto;
 }

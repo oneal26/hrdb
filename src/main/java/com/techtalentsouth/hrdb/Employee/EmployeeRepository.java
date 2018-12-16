@@ -1,4 +1,4 @@
-package com.techtalentsouth.hrdb.Employees;
+package com.techtalentsouth.hrdb.Employee;
 
 import org.springframework.data.repository.CrudRepository;
 

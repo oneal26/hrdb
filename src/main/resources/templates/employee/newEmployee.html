@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	
+	<link rel="stylesheet" href="css/all.css"> 
 </head>
 <body>
         <div id="header-flexer">
@@ -34,10 +34,6 @@
  		</div>
  		
  		<div class="form-group">
- 			<input type="text" class ="form-control" placeholder="Admin Priveledges..." th:field="*{isAdmin}" />
- 		</div>
- 		
- 		<div class="form-group">
  			<input type="text" class="form-control" placeholder="Hours Worked..." th:field="*{hrsWorked}" />
  		</div>
  		
@@ -45,25 +41,11 @@
  			<input type="password" class="form-control" placeholder="Password..." th:field="*{passWord}" />
  		</div>
  		
- 		<div class="form-group">
- 			<input type="text" class ="form-control" placeholder="address" th:field="*{address}" />
- 		</div>
+ 		<div>
+			<label th:for="isAdmin" th:text="'Admin Privileges'"></label>
+			<input type="checkbox" th:field="*{isAdmin}" />
+		</div>
  		
- 		 		<div class="form-group">
- 			<input type="text" class ="form-control" placeholder="Email..." th:field="*{email}" />
- 		</div>
- 		
- 		<div class="form-group">
- 			<input type="text" class="form-control" placeholder="Phone Number..." th:field="*{phoneNumber}" />
- 		</div>
- 		
- 		<div class="form-group">
- 			<input type="text" class="form-control" placeholder="Employment Status..." th:field="*{isEmployed}" />
- 		</div>
- 		
- 		<div class="form-group">
- 			<input type="text" class ="form-control" placeholder="Set Wage" th:field="*{Wage}" />
- 		</div>
 		
  		<button class="btn btn-primary">Submit Your Post</button>
 
