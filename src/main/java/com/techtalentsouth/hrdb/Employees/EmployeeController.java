@@ -23,7 +23,33 @@ public class EmployeeController {
 			ModelAndView mv = new ModelAndView("employee/login");
 			return mv;
 		}
+	
+	@GetMapping("allEmployees")
+	public ModelAndView allEmployees() {
+		ModelAndView mv = new ModelAndView("employee/allEmployees");
+		return mv;
 	}
+	
+	@GetMapping("editEmployee")
+	public ModelAndView editEmployee(Employee employee) {
+		ModelAndView mv = new ModelAndView("employee/editEmployee");
+		return mv;
+	}
+	
+	@GetMapping("newEmployee")
+	public ModelAndView newEmployee() {
+		ModelAndView mv = new ModelAndView("employee/newEmployee");
+		return mv;
+	}
+	
+	@GetMapping("results")
+	public ModelAndView results(Employee employee) {
+		ModelAndView mv = new ModelAndView("employee/results");
+		return mv;
+	}
+	
+	
+}
 	
 	
 
