@@ -1,17 +1,107 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>new employee</title>
-    <link type="text/css" href="css/all.css" rel="stylesheet" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/newEmployee.css" />
+    <link rel="stylesheet" type="text/css" href="all.css" />
+    
 </head>
 <body>
-	<div id="spanIt">
-    <div th:replace="fragments/navbar :: navbar"></div>
+        <div id="header-flexer">
+        <navbar th:replace="fragments/navbar :: navbar"></navbar>
+                <div id="logo">
+                    <h1>HRDB</h1>
+                </div>
+                <div id="form">
+                    <h3>A NEW EMPLOYEE ACOUNT FORM!</h3>
+                    <h2>Please Fill Out The Form</h2>
+                </div>
+            </div>
     </div>
-    <h1>Input New Hire Data:</h1>
-    
+        <div id="wrapper">
+
+                <div id="left">
+                  <div id="signin">
+                    
+                    <form>
+                      <div>
+                        <label>First Name</label>
+                        <input type="text" class="text-input" />
+                      </div>
+                      <div>
+                        <label>Last Name</label>
+                        <input type="text" class="text-input" />
+                      </div>
+                      <div>
+                          <label >User Name</label>
+                          <input type="text" class="text-input">
+                      </div>
+                      <div>
+                         <label >Password</label>
+                         <input type="password" class="text-input">
+                     </div>
+                     <div>
+                            <label >Pay Grade</label>
+                            <input type="text" class="text-input">
+                    </div>
+
+                      
+                    </form>
+                               
+                    <div class="or">
+                        
+                        
+                          </div>
+                          <a<button type="submit" class="secondary-btn">Submit</button></a>
+                             
+                        </div>
+                  
+                </div>
+                <div id="right">
+
+                        <div id="signin">
+                            <form>
+                                <div>
+                                  <label>Address</label>
+                                  <input type="text" class="text-input" />
+                                </div>
+                                <div>
+                                  <label>Phone</label>
+                                  <input type="text" class="text-input" />
+                                </div>
+                                <div>
+                                    <label >User Name</label>
+                                    <input type="text" class="text-input">
+                                </div>
+                                <div>
+                                   <label >Employee Status</label>
+                                   <input type="password" class="text-input">
+                               </div>
+                               <div>
+                                      <label >Employee Position</label>
+                                      <input type="text" class="text-input">
+                              </div>
+          
+                                
+                            </form>
+                            
+                        </div>
+
+                </div>
+                
+
+            
+           </div>
+
+           <footer id="main-footer">
+                
+                <p>Copyright &copy; 2018, HRDB All Rights Reserved</p>
+                <div>
+                  <a href="#">terms of use</a> | <a href="#">Privacy Policy</a>
+                </div>
+              </footer>
 </body>
 </html>
