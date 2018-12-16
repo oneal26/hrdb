@@ -17,8 +17,9 @@ public class EmployeeController {
 //		return "employee/index.html";
 //	}
 	
+	
+//	suggestion for  checking admin  I think this should be done in the employeeController	
 	@GetMapping	
-//	suggestion for  checking admin  I think this should be done in the employeeController
 	public String checkAdmin(Employee employee) {
 		if(employee.getIsAdmin() == true) {
 			return "admin/index.html";
@@ -38,7 +39,33 @@ public class EmployeeController {
 			return mv;
 		}
 
+	
+	@GetMapping("allEmployees")
+	public ModelAndView allEmployees() {
+		ModelAndView mv = new ModelAndView("employee/allEmployees");
+		return mv;
 	}
 	
-
+	@GetMapping("editEmployee")
+	public ModelAndView editEmployee(Employee employee) {
+		ModelAndView mv = new ModelAndView("employee/editEmployee");
+		return mv;
+	}
+	
+	@GetMapping("newEmployee")
+	public ModelAndView newEmployee() {
+		ModelAndView mv = new ModelAndView("employee/newEmployee");
+		return mv;
+	}
+	
+	@GetMapping("results")
+	public ModelAndView results(Employee employee) {
+		ModelAndView mv = new ModelAndView("employee/results");
+		return mv;
+	}
+	
+	
+}
+	
+	
 
