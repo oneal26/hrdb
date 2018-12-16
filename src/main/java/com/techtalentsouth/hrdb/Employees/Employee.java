@@ -37,6 +37,7 @@ public class Employee {
 	
 	//This method is for checking whether the person loggin as admin is admin 
 	//incase we need this for loggin security
+//<<<<<<< Updated upstream
 //	Look in the EmployeeController.java for Latori's suggestion
 	public Boolean admin() {
 		  if(firstName =="Mike" && lastName =="Smith" && passWord == passWord) {
@@ -47,6 +48,17 @@ public class Employee {
 			  return false;
 	}
 	
+//=======
+//	public Boolean admin() {
+//		  if(firstName =="Mike" && lastName =="Smith" && passWord == passWord) {
+//			  return true;
+//			  
+//		  }else
+//			  
+//			  return false;
+//	}
+
+//>>>>>>> Stashed changes
 	public Long getId() {
 		return id;
 	}
