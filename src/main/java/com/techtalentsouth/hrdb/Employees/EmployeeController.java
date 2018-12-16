@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 
+
 @Controller
 public class EmployeeController {
 	
@@ -20,12 +21,12 @@ public class EmployeeController {
 	
 	
 //	suggestion for  checking admin  I think this should be done in the employeeController	
-	@PostMapping("/")	
-	public String checkAdmin(Employee employee) {
-		if(employee.getIsAdmin() == true) {
-			return "admin/index.html";
-		}else {return "employee/index.html";}
-	}
+//	@PostMapping("/")	
+//	public String checkAdmin(Employee employee) {
+//		if(employee.getIsAdmin() == true) {
+//			return "admin/index.html";
+//		}else {return "employee/index.html";}
+//	}
 		
 	@GetMapping("index")
 	public ModelAndView index(Employee employee) {
@@ -54,7 +55,7 @@ public class EmployeeController {
 	}
 	
 	@GetMapping("newEmployee")
-	public ModelAndView newEmployee() {
+	public ModelAndView newEmployee(Employee employee) {
 		ModelAndView mv = new ModelAndView("employee/newEmployee");
 		return mv;
 	}
@@ -62,6 +63,14 @@ public class EmployeeController {
 	@GetMapping("results")
 	public ModelAndView results(Employee employee) {
 		ModelAndView mv = new ModelAndView("employee/results");
+		return mv;
+	}
+	
+	@PostMapping("employee/newEmployee")
+	public ModelAndView createEmployee(Employee employee) {
+		ModelAndView mv = new ModelAndView("employee/results");
+		Employee newEmployee = employeeRepository.save(employee);
+		mv.addObject("newEmployee", newEmployee);
 		return mv;
 	}
 	
