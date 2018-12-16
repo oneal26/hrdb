@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	
+	 <style>  #main-footer{background-color:#454545; padding-top: 0.5rem; text-align: center }</style>
 </head>
 <body>
         <div id="header-flexer">
@@ -71,12 +71,10 @@
 </div>
         
 
-     <footer id="main-footer">
+     <footer id="main-footer" th:replace="fragments/footer ::footer" >
+     
+                <!-- footer rendered here through thyme leaf -->
                 
-                <p>Copyright &copy; 2018, HRDB All Rights Reserved</p>
-                <div>
-                  <a href="#">terms of use</a> | <a href="#">Privacy Policy</a>
-                </div>
               </footer>
               
               
