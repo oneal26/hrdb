@@ -5,7 +5,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import org.springframework.web.bind.annotation.GetMapping;
 
 //address, email, phone, status,  and wage have been added!
 
