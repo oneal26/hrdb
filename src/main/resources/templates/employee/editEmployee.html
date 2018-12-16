@@ -7,105 +7,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   
-    <title>admin employee edit</title>
-  
 
-</head> 
+    <title>edit employee</title>
+    
+</head>
+<body>
+    <navbar th:replace="fragments/navbar :: navbar"></navbar>
+       
+</body>
+</html>
 
-<body> 
-
-<div class="container"> 
-
- 
-
-<h1>Edit Employee Data</h1> 
-
- 	 
-
- 	<form action="#" th:action="@{/employee/editEmployee}" th:object="${employee}" method="put"> 
- 	 
-
- 	<div class="form-group"> 
-
- 	<input type="text" class="form-control" placeholder="First Name Here..." th:field="*{firstName}" /> 
-
- 	</div>
- 	
- 	
- 	<div class="form-group"> 
-
- 	<input type="text" class="form-control" placeholder="Last Name here..." th:field="*{lastName}" /> 
-
- 	</div>
- 	
- 	
- 	<div class="form-group"> 
-
- 	<input type="text" class="form-control" placeholder="Email goes here..." th:field="*{email}" /> 
-
- 	</div>
- 	
- 	
- 	<div>
-   <label th:for="isAdmin" th:text="'Admin Status:'"></label>
-   <input type="checkbox" th:field="*{isAdmin}" />
-  </div>
-  
-  
-  <div>
-   <label th:for="isAdmin" th:text="'Admin Status:'"></label>
-   <input type="checkbox" th:field="*{isAdmin}" />
-  </div>
- 	
- 	
- 	<div class="form-group"> 
-
- 	<input type="text" class="form-control" placeholder="Admin check here..." th:field="*{isAdmin}" /> 
-
- 	</div> 
- 	
- 	<div class="form-group"> 
-
- 	<input type="text" class="form-control" placeholder="Current Status here..." th:field="*{isActive}" /> 
-
- 	</div>
- 	
- 	
-
- 	 <div class="form-group"> 
-
- 	<input type="text" class="form-control" placeholder="Hours Worked here..." th:field="*{hrsWorked}" /> 
-
- 	</div>
- 	
- 	<div class="form-group"> 
-
- 	<input type="text" class ="form-control" placeholder="Hourly Wage here..." th:field="*{hrWage}" /> 
-
- 	</div>
-
- 	
- 	
- 	<div class="form-group"> 
-
- 	<input type="text" class ="form-control" placeholder="Password Here..." th:field="*{passWord}" /> 
-
- 	</div>
-
- 
-
- 	<button class="btn btn-primary">Submit Your Update</button> 
-
- 
-
-<a class= "btn btn-primary" th:href="@{/}">Back To Homepage</a> 
-
-</div> 
- 
-
-<script src="webjars/jquery/1.9.1/jquery.min.js"></script> 
-
-</body> 
-
-</html> 

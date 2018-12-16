@@ -5,7 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import org.springframework.web.bind.annotation.GetMapping;
+
+//address, email, phone, status,  and wage have been added!
 
 @Entity
 public class Employee {
@@ -19,33 +20,31 @@ public class Employee {
 	private Boolean isAdmin;
 	private Integer hrsWorked;
 	private String passWord;
-	
+	private String address;
+	private String email;
+	private String phoneNumber;
+	private Boolean isEmployed;
+	private Integer wage;
 	
 	public Employee() {
 		//Empty Employee constructor for the JPA
 		
 	}
 	
-	public Employee(String firstName, String lastName, Boolean isAdmin, Integer hrsWorked, String passWord) {
+	public Employee(String firstName, String lastName, Boolean isAdmin, Integer hrsWorked, String passWord, String address, String email, String phoneNumber, Boolean isEmployed, Integer wage) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.isAdmin = isAdmin;
 		this.hrsWorked = hrsWorked;
 		this.passWord = passWord;
+		this.address = address;
+		this.email = email;
+		this.phoneNumber = phoneNumber;
+		this.isEmployed = isEmployed;
+		this.wage = wage;
 		
 	}
 	
-	//This method is for checking whether the person loggin as admin is admin 
-	//incase we need this for loggin security
-//	Look in the EmployeeController.java for Latori's suggestion
-	public Boolean admin() {
-		  if(firstName =="Mike" && lastName =="Smith" && passWord == passWord) {
-			  return true;
-			  
-		  }else
-			  
-			  return false;
-	}
 	
 	public Long getId() {
 		return id;
@@ -90,12 +89,61 @@ public class Employee {
 	public void setPassWord(String passWord) {
 		this.passWord = passWord;
 	}
+	
+	
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public Boolean getIsEmployed() {
+		return isEmployed;
+	}
+
+	public void setIsEmployed(Boolean isEmployed) {
+		this.isEmployed = isEmployed;
+	}
+
+	public Integer getWage() {
+		return wage;
+	}
+
+	public void setWage(Integer wage) {
+		this.wage = wage;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", isAdmin=" + isAdmin
-				+ ", hrsWorked=" + hrsWorked + ", passWord=" + passWord + "]";
+				+ ", hrsWorked=" + hrsWorked + ", passWord=" + passWord + ", address=" + address + ", email=" + email
+				+ ", phoneNumber=" + phoneNumber + ", isEmployed=" + isEmployed + ", wage=" + wage + "]";
 	}
+
+	
 	
 	
 	
