@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/results.css">
+    <link rel="stylesheet" type="text/css" href="css/all.css">
+    <title>adminResults</title>  
+  </head>
+<body>
+	<!--UPDATE OUR LOGO  -->
+    <div id="logo">
+  		<h1>HRDB</h1>
+  	</div>	
+  	<div id="main-text">
+  		<img src="https://cdn0.iconfinder.com/data/icons/harmonicons-02/64/check-circle-512.png" height="100" width="100"/>
+  		<h2>Thank you!</h2>
+    	<h3>You Have Successfully Created an Employee Account</h3>	 
+  	</div>
+  	<div id=container> 
+  		<h4>We have stored the following information:</h4>
+      	<p>
+      		First Name: <span th:text="${firstName}"></span>
+      	</p>
+      	<p>
+        	Last Name: <span th:text="${lastName}"></span>
+      	</p>
+      	<p>
+       		Address: <span th:text="${address}"></span>
+      	</p>
+      	<p>
+        	Phone Number: <span th:text="${phoneNumber}"></span>
+      	</p> 
+      	<p>
+        	Email: <span th:text="${email}"></span>
+        </p>
+        <p>
+        	Password: <span th:text="${password}"></span>
+      	</p>
+        <p>
+        	Employment Status: <span th:text="${isEmployed}"></span>
+        </p>
+        <p>
+            Wage: <span th:text="${wage}"></span>
+        </p> 
+        <p>
+            Hours Worked: <span th:text="{hrsWorked}"></span>
+        </p> 
+        <p>
+        	Administrator Status: <span th:text="${isAdmin}"></span>
+      	</p>  
+      	
+      	<a href="admin/index">
+        	<button>Done</button>
+      	</a>
+	</div>    
+   
+</body>
+</html>
