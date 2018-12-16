@@ -1,0 +1,22 @@
+body{
+	background-color: #c4c4c4;
+}
+
+
+h1{
+	color: #878787;
+}
+
+.navbar, ul, li, a{
+	background-color: #878787;
+	display:inline;
+	list-style-type:none;
+	text-decoration:none;
+	color:#878787;
+}
+
+
+#spanIt{
+	height:5em;
+	width:100%;
+}

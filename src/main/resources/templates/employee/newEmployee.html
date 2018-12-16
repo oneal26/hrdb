@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>new employee</title>
-    <link rel="stylesheet" type="text/css" href="all.css" />
+    <link type="text/css" href="css/all.css" rel="stylesheet" />
 </head>
-<body id="body">
-    <navbar th:replace="fragments/navbar :: navbar"></navbar>
+<body>
+	<div id="spanIt">
+    <div th:replace="fragments/navbar :: navbar"></div>
+    </div>
     <h1>Input New Hire Data:</h1>
+    
 </body>
 </html>
