@@ -17,49 +17,31 @@
     <div class="header">
     </div>
        
- <div class="container">
-  <h2>HRDB</h2>
+<!--  <div class="container"> -->
+  <h1>HRDB</h1>
   <p>All Employees</p>            
-  <table class="table table-condensed" action="#" th:action=@{employee/allEmployee}" the:object${}" method="">
-  
-    <thead>
-      <tr>
-      <th>Update</>
-      <th>Delete</>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        
-        <th>Status</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><label class="checkbox-inline"><input type="checkbox" value="">option</label> </td>
-        <td><label class="checkbox-inline"><input type="checkbox" value="">option</label> </td>
-        <td><p th:text="${firstName}"/> </td>
-        <td><p th:text="${lastName}"/> </td>
-        
-        <td><p th:text="${isemployyed}"/> </td>
-      </tr>
-      <tr>
-        <td><label class="checkbox-inline"><input type="checkbox" value="">option</label> </td>
-        <td><label class="checkbox-inline"><input type="checkbox" value="">option</label> </td>
-        <td><p th:text="${firstName}"/> </td>
-        <td><p th:text="${lastName}"/> </td>
-        
-        <td><p th:text="${isemployyed}"/> </td>
-      </tr>
-      <tr>
-        <td><label class="checkbox-inline"><input type="checkbox" value="">option</label> </td>
-        <td><label class="checkbox-inline"><input type="checkbox" value="">option</label> </td>
-        <td><p th:text="${firstName}"/> </td>
-        <td><p th:text="${lastName}"/> </td>
-        
-        <td><p th:text="${isemployyed}"/> </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+
+<div class="row">
+			<div th:each="employee : ${employees}">
+		        <div class="col-md-6">
+		            <div class="panel panel-default">
+		                <div class="panel-heading">
+		                    <p th:text="${employee.isAdmin}"/>
+						</div>
+					    <div class="panel-body">
+							<p th:text="${employee.firstName}"/>
+							<p th:text="${employee.lastName}" />
+					    </div>
+					    <!-- <div class="panel-footer">
+						<a class="btn btn-primary" th:href="#">Edit Post</a>
+						<form action="#" th:action="#" th:method="delete" class="form-horizontal">
+						   <button type="submit" class="btn btn-danger">Delete</button>
+						</form>
+		            </div> -->
+		          </div>
+		        </div>
+		    </div>
+		</div>
        
        
        

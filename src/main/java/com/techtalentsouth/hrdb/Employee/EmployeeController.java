@@ -44,8 +44,9 @@ public class EmployeeController {
 
 	
 	@GetMapping("allEmployees")
-	public ModelAndView allEmployees() {
+	public ModelAndView allEmployees(Employee employee) {
 		ModelAndView mv = new ModelAndView("employee/allEmployees");
+		mv.addObject("employees", employeeRepository.findAll());
 		return mv;
 	}
 	
