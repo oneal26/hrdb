@@ -73,7 +73,12 @@ public class EmployeeController {
 		mv.addObject("newEmployee", newEmployee);
 		return mv;
 	}
-	
+	//new change for testing
+	@GetMapping("memberEdit")
+	public ModelAndView memberEdit(Employee employee) {
+		ModelAndView mv = new ModelAndView("employee/memberEdit");
+		return mv;
+	}
 	
 	
 	
