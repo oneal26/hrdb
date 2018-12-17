@@ -74,19 +74,28 @@ public class EmployeeController {
 		mv.addObject("newEmployee", newEmployee);
 		return mv;
 	}
-	
-	@PostMapping("/")
-	public ModelAndView verifyLogin(Employee employee) {
-		ModelAndView mv;
-		if(employee.getFirstName().contains(employee.getFirstName()) && employee.getPassWord().contains(employee.getPassWord())) {
-			mv = new ModelAndView("employee/index");
-		}else {
-			mv = new ModelAndView("employee/login");
-		}
-		return mv;
-		
-	}
-	
+////<<<<<<< HEAD
+//	
+//	@PostMapping("/")
+//	public ModelAndView verifyLogin(Employee employee) {
+//		ModelAndView mv;
+//		if(employee.getFirstName().contains(employee.getFirstName()) && employee.getPassWord().contains(employee.getPassWord())) {
+//			mv = new ModelAndView("employee/index");
+//		}else {
+//			mv = new ModelAndView("employee/login");
+//		}
+//		return mv;
+//		
+//	}
+//	
+////=======
+//	//new change for testing
+//	@GetMapping("memberEdit")
+//	public ModelAndView memberEdit(Employee employee) {
+//		ModelAndView mv = new ModelAndView("employee/memberEdit");
+//		return mv;
+//	}
+////>>>>>>> 6deb4f11a46f8affe7de877bbdca409b205985d1
 	
 	
 	
