@@ -1,10 +1,11 @@
-package com.techtalentsouth.hrdb.Employees;
+package com.techtalentsouth.hrdb.Employee;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
+
 
 
 
@@ -60,16 +61,16 @@ public class EmployeeController {
 		return mv;
 	}
 	
-	@GetMapping("results")
-	public ModelAndView results(Employee employee) {
-		ModelAndView mv = new ModelAndView("employee/results");
-		return mv;
-	}
+//	@GetMapping("results")
+//	public ModelAndView results(Employee employee) {
+//		ModelAndView mv = new ModelAndView("employee/results");
+//		return mv;
+//	}
 	
 	@PostMapping("employee/newEmployee")
 	public ModelAndView createEmployee(Employee employee) {
 		ModelAndView mv = new ModelAndView("employee/results");
-		Employee newEmployee = employeeRepository.save(employee);
+		Employee newEmployee = employeeRepository.save(new Employee(employee.getFirstName(), employee.getLastName(), employee.getIsAdmin(), employee.getHrsWorked(), employee.getPassWord()));
 		mv.addObject("newEmployee", newEmployee);
 		return mv;
 	}

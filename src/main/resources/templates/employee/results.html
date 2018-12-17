@@ -6,13 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/results.css">
     <link rel="stylesheet" type="text/css" href="css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
     <title>results</title>  
   </head>
 <body>
 	<!--UPDATE OUR LOGO  -->
-    <div id="logo">
+	<div class="container-fluid result">
+    <div class="header">
   		<h1>HRDB</h1>
-  	</div>	
+  	</div>
+  
   	<div id="main-text">
   		<img src="https://cdn0.iconfinder.com/data/icons/harmonicons-02/64/check-circle-512.png" height="100" width="100"/>
   		<h2>Thank you!</h2>
@@ -27,19 +31,29 @@
         	Last Name: <span th:text="${lastName}"></span>
       	</p>
       	<p>
-       		Address: <span th:text="${address}"></span>
+       		Admin Privileges: <span th:text="${isAdmin}"></span>
       	</p>
       	<p>
-        	Phone Number: <span th:text="${phoneNumber}"></span>
+        	Password: Confidential
       	</p> 
       	<p>
-        	Email: <span th:text="${email}"></span>
+        	Hours Worked: <span th:text="${hrsWorked}"></span>
       	</p>
       	
-      	<a href="index">
+      	<a href="../index">
         	<button>Done</button>
       	</a>
-	</div>    
+	</div> 
+	</div>
+	
+	<div th:replace="fragments/footer :: footer"></div>
+	
+	
+	<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	   
    
 </body>
 </html>
