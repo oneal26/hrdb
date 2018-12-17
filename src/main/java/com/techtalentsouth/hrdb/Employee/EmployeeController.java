@@ -75,6 +75,18 @@ public class EmployeeController {
 		return mv;
 	}
 	
+	@PostMapping("/")
+	public ModelAndView verifyLogin(Employee employee) {
+		ModelAndView mv;
+		if(employee.getFirstName().contains(employee.getFirstName()) && employee.getPassWord().contains(employee.getPassWord())) {
+			mv = new ModelAndView("employee/index");
+		}else {
+			mv = new ModelAndView("employee/login");
+		}
+		return mv;
+		
+	}
+	
 	
 	
 	
