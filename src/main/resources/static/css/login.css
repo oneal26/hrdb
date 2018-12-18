@@ -55,8 +55,8 @@ color: white;
 }
 
 .btn{
-	width: 50%;
-	float: left;
+	width: 100%;
+	margin:0 auto;
 	height: 40px;
 	font-size: 18px;
 }
