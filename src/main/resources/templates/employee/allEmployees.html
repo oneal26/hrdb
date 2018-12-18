@@ -20,30 +20,34 @@
 <!--  <div class="container"> -->
   <h1>HRDB</h1>
   <p>All Employees</p>            
-
-<div class="row">
-			<div th:each="employee : ${employees}">
-		        <div class="col-md-6">
-		            <div class="panel panel-default">
-		                <div class="panel-heading">
-		                    <p th:text="${employee.isAdmin}"/>
-						</div>
-					    <div class="panel-body">
-							<p th:text="${employee.firstName}"/>
-							<p th:text="${employee.lastName}" />
-					    </div>
-					    <!-- <div class="panel-footer">
-						<a class="btn btn-primary" th:href="#">Edit Post</a>
-						<form action="#" th:action="#" th:method="delete" class="form-horizontal">
-						   <button type="submit" class="btn btn-danger">Delete</button>
-						</form>
-		            </div> -->
-		          </div>
-		        </div>
-		    </div>
-		</div>
-       
-       
+    
+<div class="container-fluid">
+<div class="table-responsive">
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Employees</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Hours Worked</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="employee : ${employees}">
+      <th scope="row">
+      <a class="btn btn-primary" th:href="@{'/employee/editEmployee/{id}'(id=${employee.id})}">Edit Employee</a>
+	  <form action="#" th:action="@{'/employee/delete/{id}'(id=${employee.id})}" th:method="delete" class="form-horizontal">
+	  <button type="submit" class="btn btn-danger">Delete Employee</button>
+	  </form></th>
+      <td th:text="${employee.firstName}"></td>
+      <td th:text="${employee.lastName}"></td>
+      <td th:text="${employee.isAdmin}"></td>
+      <td th:text="${employee.hrsWorked}"></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>       
        
        
        
