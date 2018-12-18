@@ -25,19 +25,19 @@
   	<div id=container> 
   		<h4>We have the following information:</h4>
       	<p>
-      		First Name: <span th:text="${firstName}"></span>
+      		First Name: <span th:text="${employee.firstName}"></span>
       	</p>
       	<p>
-        	Last Name: <span th:text="${lastName}"></span>
+        	Last Name: <span th:text="${employee.lastName}"></span>
       	</p>
       	<p>
-       		Admin Privileges: <span th:text="${isAdmin}"></span>
+       		Admin Privileges: <span th:text="${employee.isAdmin}"></span>
       	</p>
       	<p>
         	Password: Confidential
       	</p> 
       	<p>
-        	Hours Worked: <span th:text="${hrsWorked}"></span>
+        	Hours Worked: <span th:text="${employee.hrsWorked}"></span>
       	</p>
       	
       	<a href="../index">

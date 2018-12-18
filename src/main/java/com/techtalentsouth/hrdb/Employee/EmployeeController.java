@@ -69,11 +69,12 @@ public class EmployeeController {
 		return mv;
 	}
 	
-//	@GetMapping("results")
-//	public ModelAndView results(Employee employee) {
-//		ModelAndView mv = new ModelAndView("employee/results");
-//		return mv;
-//	}
+	@GetMapping("results")
+	public ModelAndView results(Employee employee) {
+		ModelAndView mv = new ModelAndView("employee/results");
+		mv.addObject("employees", employeeRepository.findAll());
+		return mv;
+	}
 	
 	@PostMapping("employee/newEmployee")
 	public ModelAndView createEmployee(Employee employee) {
