@@ -25,51 +25,54 @@
     	
         <div class="container">
 		<h1>Enter New Hire</h1>
- 		<form action="#" th:action="@{employee/newEmployee}" th:object="${employee}" method="post">
- 		
- 		<div class="form-group">
- 			<input type="text" class="form-control" placeholder="Firstname..." th:field="*{firstName}" />
- 		</div>
- 		
- 		<div class="form-group">
- 			<input type="text" class="form-control" placeholder="Lastname..." th:field="*{lastName}" />
- 		</div>
- 		
- 		<div class="form-group">
- 			<input type="text" class="form-control" placeholder="Hours Worked..." th:field="*{hrsWorked}" />
- 		</div>
- 		
- 		<div class="form-group">
- 			<input type="password" class="form-control" placeholder="Password..." th:field="*{passWord}" />
- 		</div>
- 		<div class="form-group">
- 			<input type="text" class="form-control" placeholder="Address..." th:field="*{address}" />
- 		</div>
- 		<div class="form-group">
- 			<input type="text" class="form-control" placeholder="Email..." th:field="*{email}" />
- 		</div>
- 		<div class="form-group">
- 			<input type="text" class="form-control" placeholder="Wage..." th:field="*{wage}" />
- 		</div>
- 		<div class="form-group">
- 			<input type="text" class="form-control" placeholder="Phone Number..." th:field="*{phoneNumber}" />
- 		</div>
- 		<div>
-			<label th:for="isEmployed" th:text="'Currently Employee'"></label>
-			<input type="checkbox" th:field="*{isEmployed}" />
-		</div>
- 		
- 		<div>
-			<label th:for="isAdmin" th:text="'Admin Privileges'"></label>
-			<input type="checkbox" th:field="*{isAdmin}" />
-		</div>
+ 		<form action="#" th:action="@{/employee/newEmployee}" th:object="${employee}" th:method="post">
+						<input type="hidden" th:field="*{id}" />
+							 <div>
+								<label th:for="isAdmin" th:text="'Admin Status'"></label>
+								<input type="checkbox" th:field="*{isAdmin}" />
+							 </div>
+							 
+							 <div>
+								<label th:for="isEmployed" th:text="'Employment Status'"></label>
+								<input type="checkbox" th:field="*{isEmployed}" />
+							 </div>
+							
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="First Name..." th:field="*{firstName}" />
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Last Name..." th:field="*{lastName}" />
+							</div>
+						
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Hours Worked..." th:field="*{hrsWorked}" />
+							</div>
+							
+							<div class="form-group">
+								<input type="password" class ="form-control" placeholder="Password..." th:field="*{passWord}" />
+							</div>
+							
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Address..." th:field="*{address}" />
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="E-Mail..." th:field="*{email}" />
+							</div>
+							
+							<div class="form-group">
+								<input type="text" class ="form-control" placeholder="Wage..." th:field="*{wage}" />
+							</div>
+							
+							<div class="form-group">
+								<input type="text" class ="form-control" placeholder="Phone Number..." th:field="*{phoneNumber}" />
+							</div>
  		
 		
  		<button class="btn btn-primary">Submit Your Post</button>
 
 		<a class= "btn btn-primary" th:href="@{index}">Back To Homepage</a>
 </div>
-        
+        <div class="block"><br><br><br><br><br><br><br><br></div>
 
      <div th:replace="fragments/footer :: footer"></div>
               

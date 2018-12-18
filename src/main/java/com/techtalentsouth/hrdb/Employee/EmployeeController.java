@@ -79,8 +79,7 @@ public class EmployeeController {
 	@PostMapping("employee/newEmployee")
 	public ModelAndView createEmployee(Employee employee) {
 		ModelAndView mv = new ModelAndView("employee/results");
-		Employee newEmployee = employeeRepository.save(new Employee(employee.getFirstName(), employee.getLastName(), employee.getIsAdmin(), employee.getHrsWorked(), 
-				employee.getPassWord(),employee.getAddress(),employee.getEmail(),employee.getIsEmployed(),employee.getWage(),employee.getPhoneNumber()));
+		Employee newEmployee = employeeRepository.save(new Employee(employee.getFirstName(), employee.getLastName(), employee.getIsAdmin(), employee.getHrsWorked(), employee.getPassWord(),employee.getAddress(), employee.getEmail(), employee.getIsEmployed(), employee.getWage(), employee.getPhoneNumber()));
 		mv.addObject("newEmployee", newEmployee);
 		return mv;
 	}
