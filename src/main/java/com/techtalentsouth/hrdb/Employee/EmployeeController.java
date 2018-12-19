@@ -79,7 +79,7 @@ public class EmployeeController {
 	@PostMapping("employee/newEmployee")
 	public ModelAndView createEmployee(Employee employee) {
 		ModelAndView mv = new ModelAndView("employee/results");
-		Employee newEmployee = employeeRepository.save(new Employee(employee.getFirstName(), employee.getLastName(), employee.getIsAdmin(), employee.getHrsWorked(), employee.getPassWord(),employee.getAddress(), employee.getEmail(), employee.getIsEmployed(), employee.getWage(), employee.getPhoneNumber()));
+		Employee newEmployee = employeeRepository.save(new Employee(employee.getFirstName(), employee.getLastName(), employee.getIsAdmin(), employee.getHrsWorked(), employee.getPassWord(),employee.getAddress(), employee.getEmail(), employee.getIsEmployed(), employee.getWage(), employee.getPhoneNumber(), employee.getCurrentPay()));
 		mv.addObject("newEmployee", newEmployee);
 		return mv;
 	}
@@ -136,7 +136,11 @@ public class EmployeeController {
 		}
 		
 		
-		
+		@GetMapping("/calendar")
+		public ModelAndView calendar(Employee employee) {
+			ModelAndView mv = new ModelAndView("employee/calendar");
+			return mv;
+		}
 		
 		
 	

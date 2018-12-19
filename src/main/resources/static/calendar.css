@@ -1,0 +1,68 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300);
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html, body, div, span, h1, h2, h3, p, a, form, nav, li, ul {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline;
+}
+ul {
+	list-style-type: none;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.monthname {
+  width: 18em;
+}
+.pointer {
+  cursor: pointer;
+}
+body {
+  font-family: 'Lato',sans-serif;
+  padding: 1em 0;
+}
+.group:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.calendar p {
+	margin-bottom: .5em;
+	color: #d09015;
+}
+.calendar {
+	background: #222;
+	color: #ddd;
+	padding: .5em .5em 1em;
+	max-width: 20em;
+	min-height: 15em;
+	margin: .5em auto;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+.calendar li {
+	float: left;
+	width: -webkit-calc(100%/7);
+	text-align: center;
+	padding: .25em 0;
+	cursor: pointer;
+	border-bottom: 1px solid #444;
+}
+.calendar li:hover, .calendar li.red {
+	color: red;
+}
+.calendar li:nth-child(-n+7) {
+	color: #666;
+}
+.center {
+	text-align: center;
+}

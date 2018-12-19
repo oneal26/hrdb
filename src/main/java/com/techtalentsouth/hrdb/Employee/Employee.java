@@ -16,21 +16,23 @@ public class Employee {
 	private String firstName;
 	private String lastName;
 	private Boolean isAdmin;
-	private Integer hrsWorked;
+	private int hrsWorked;
 	private String passWord;
 	private String address;
 	private String email;
 	private Boolean isEmployed;
-	private Integer wage;
+	private int  wage;
 	private String phoneNumber;
+	private int currentPay;
+	
 	
 	public Employee() {
 		//Empty Employee constructor for the JPA
 		
 	}
 	
-	public Employee(String firstName, String lastName, Boolean isAdmin, Integer hrsWorked, String passWord, 
-			        String address, String email, Boolean isEmployed, Integer wage, String phoneNumber) {
+	public Employee(String firstName, String lastName, Boolean isAdmin, int hrsWorked, String passWord, 
+			        String address, String email, Boolean isEmployed, int wage, String phoneNumber, int currentPay) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.isAdmin = isAdmin;
@@ -41,6 +43,7 @@ public class Employee {
 		this.isEmployed = isEmployed;
 		this.wage = wage;
 		this.phoneNumber = phoneNumber;
+		this.currentPay = currentPay;
 		
 	}
 	
@@ -73,7 +76,7 @@ public class Employee {
 		this.isAdmin = isAdmin;
 	}
 
-	public Integer getHrsWorked() {
+	public int getHrsWorked() {
 		return hrsWorked;
 	}
 
@@ -113,7 +116,7 @@ public class Employee {
 		this.isEmployed = isEmployed;
 	}
 
-	public Integer getWage() {
+	public int getWage() {
 		return wage;
 	}
 
@@ -128,12 +131,22 @@ public class Employee {
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
+	
+
+	public int getCurrentPay() {
+		return currentPay;
+		
+	}
+
+	public void setCurrentPay(int currentPay) {
+		this.currentPay = currentPay;
+	}
 
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", isAdmin=" + isAdmin
 				+ ", hrsWorked=" + hrsWorked + ", passWord=" + passWord + ", address=" + address + ", email=" + email
-				+ ", isEmployed=" + isEmployed + ", wage=" + wage + ", phoneNumber=" + phoneNumber + "]";
+				+ ", isEmployed=" + isEmployed + ", wage=" + wage + ", phoneNumber=" + phoneNumber +" ,currentPay=" + currentPay + "]";
 	}
 
 
