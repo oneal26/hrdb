@@ -112,7 +112,7 @@ public class EmployeeController {
 		//saves the edits to the employee
 		@PutMapping("/employee/editEmployee")
 		public ModelAndView updateEmployee(Employee employee) {
-			ModelAndView mv = new ModelAndView("redirect:/");
+			ModelAndView mv = new ModelAndView("redirect:/allEmployees");
 			employeeRepository.save(employee);
 			return mv;
 		}
@@ -121,7 +121,7 @@ public class EmployeeController {
 		//shows the form for editing a employee
 		@DeleteMapping("/employee/delete/{id}")
 		public ModelAndView deleteEmployee(@PathVariable("id") long id) {
-			ModelAndView mv = new ModelAndView("redirect:/");
+			ModelAndView mv = new ModelAndView("redirect:/allEmployees");
 			employeeRepository.deleteById(id);
 			return mv;
 		}
