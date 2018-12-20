@@ -12,7 +12,7 @@ color:white;
 background-color:rgba(13,13,13,0.2);
 min-height:500px;
 padding: 40px 80px 40px 80px;
-box-shadow: -10px -10px 9px #33cc33;
+box-shadow: -10px -10px 9px #238684;
 
 }
 .user{
@@ -30,15 +30,15 @@ color: white;
 
 #iconn{
 
-background-color: #5cb85c;
-border-color: #4cae4c;
+background-color: #238684;
+border-color: #238684;
 color: white;
 
 }
 #iconn1{
 
-background-color: #5cb85c;
-border-color: #4cae4c;
+background-color: #238684;
+border-color: #238684;
 color: white;
 
 }
@@ -59,4 +59,6 @@ color: white;
 	margin:0 auto;
 	height: 40px;
 	font-size: 18px;
+	background-color:#238684;
+	border-color:#238684;
 }

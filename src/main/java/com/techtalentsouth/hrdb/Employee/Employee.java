@@ -28,6 +28,7 @@ public class Employee {
 		//Empty Employee constructor for the JPA
 		
 	}
+
 	
 	public Employee(String firstName, String lastName, Boolean isAdmin, Integer hrsWorked, String passWord, 
 			        String address, String email, Boolean isEmployed, Integer wage, String phoneNumber) {
@@ -47,6 +48,10 @@ public class Employee {
 	
 	public Long getId() {
 		return id;
+	}
+	
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getFirstName() {

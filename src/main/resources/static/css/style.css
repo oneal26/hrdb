@@ -60,6 +60,10 @@ label {
 	margin: 0;
 }
 
+nav{
+	border-radius:0em !important;
+}
+
 
 /*-- header --*/
 
@@ -620,10 +624,10 @@ ul.some_agile_facts span.fa {
 	-webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1);
 	-moz-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1);
 	-o-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1);
-	border-radius: 50%;
-	-webkit-border-radius: 50%;
-	-o-border-radius: 50%;
-	-moz-border-radius: 50%;
+	border-radius: 0%;
+	-webkit-border-radius: 0%;
+	-o-border-radius: 0%;
+	-moz-border-radius: 0%;
 }
 
 ul.some_agile_facts label {
@@ -2384,7 +2388,7 @@ h3.m_1 {
 
 .label {
 	font-weight: 300 !important;
-	border-radius: 4px;
+	border-radius: 0px;
 }
 
 .grid_5 {

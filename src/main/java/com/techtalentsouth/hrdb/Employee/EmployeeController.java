@@ -28,18 +28,31 @@ public class EmployeeController {
 //	}
 	
 	
-//	suggestion for  checking admin  I think this should be done in the employeeController	
-//	@PostMapping("/")	
-//	public String checkAdmin(Employee employee) {
-//		if(employee.getIsAdmin() == true) {
-//			return "admin/index.html";
-//		}else {return "employee/index.html";}
-//	}
+		
+	@PostMapping("/")	
+	public ModelAndView checkEmployee(Employee employee) {
+		ModelAndView mv = new ModelAndView("employee/calendar");
+		Employee realEmployee = employeeRepository.findByEmail(employee.getEmail());
+		
+		
+//		Optional<Employee> thisEmployee = employeeRepository.findById(employee.getId());
+		if(realEmployee.getPassWord().equals(employee.getPassWord())) {
+				return mv;
+		}else {
+			return new ModelAndView("/");
+		}
+	}
 		
 	@GetMapping("index")
 	public ModelAndView index(Employee employee) {
 		ModelAndView mv = new ModelAndView("employee/index");
 		mv.addObject("employees", employeeRepository.findAll());
+		return mv;
+	}
+	
+	@GetMapping("calendar")
+	public ModelAndView calendar(Employee employee) {
+		ModelAndView mv = new ModelAndView("employee/calendar");
 		return mv;
 	}
 	
@@ -69,12 +82,12 @@ public class EmployeeController {
 		return mv;
 	}
 	
-	@GetMapping("results")
-	public ModelAndView results(Employee employee) {
-		ModelAndView mv = new ModelAndView("employee/results");
-		mv.addObject("employees", employeeRepository.findAll());
-		return mv;
-	}
+//	@GetMapping("results")
+//	public ModelAndView results(Employee employee) {
+//		ModelAndView mv = new ModelAndView("employee/results");
+//		mv.addObject("employees", employeeRepository.findAll());
+//		return mv;
+//	}
 	
 	@PostMapping("employee/newEmployee")
 	public ModelAndView createEmployee(Employee employee) {
@@ -83,28 +96,6 @@ public class EmployeeController {
 		mv.addObject("newEmployee", newEmployee);
 		return mv;
 	}
-////<<<<<<< HEAD
-//	
-//	@PostMapping("/")
-//	public ModelAndView verifyLogin(Employee employee) {
-//		ModelAndView mv;
-//		if(employee.getFirstName().contains(employee.getFirstName()) && employee.getPassWord().contains(employee.getPassWord())) {
-//			mv = new ModelAndView("employee/index");
-//		}else {
-//			mv = new ModelAndView("employee/login");
-//		}
-//		return mv;
-//		
-//	}
-//	
-////=======
-//	//new change for testing
-//	@GetMapping("memberEdit")
-//	public ModelAndView memberEdit(Employee employee) {
-//		ModelAndView mv = new ModelAndView("employee/memberEdit");
-//		return mv;
-//	}
-////>>>>>>> 6deb4f11a46f8affe7de877bbdca409b205985d1
 	
 	
 	
