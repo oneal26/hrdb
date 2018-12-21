@@ -39,7 +39,7 @@ public class EmployeeController {
 		if(realEmployee.getPassWord().equals(employee.getPassWord())) {
 				return mv;
 		}else {
-			return new ModelAndView("/");
+			return new ModelAndView("/employee/index");
 		}
 	}
 		
